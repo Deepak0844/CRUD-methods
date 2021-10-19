@@ -1,0 +1,108 @@
+/* CRUD */
+
+.user-container{
+    margin: auto;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    width: 300px;
+    border-radius: 0.8rem;
+    gap: 2rem;
+    transition: all 0.5s;
+}
+body{
+    background-image: linear-gradient(
+        to right bottom, 
+        #21549f, 
+        #71479e, 
+        #a72e87, 
+        #c9115d, 
+        #d12929
+        );
+        min-height: 100vh;
+}
+#editName:hover,#editAvatar:hover{
+    background: rgba( 202, 46, 46, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    /* border-radius: 10px; */
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+button{
+    width: 50px;
+    height: 20px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+#addbutton{
+border:none;
+background: orange;
+font-size: 15px;
+border-radius: 10px;
+margin: 5px;
+}
+.user-avatar{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-name{
+    font-weight: bold;
+}
+.user-container:hover{
+font-size: 1.4rem;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+color: tomato
+}
+.user-form{
+    margin: 2rem;
+}
+.edit-user-form{
+    display: none;
+}
+.add-user-name,.add-user-avatar{
+    border: none;
+    outline: transparent;
+    border-radius: 10px;
+    height: 20px;
+    margin: 5px;
+}
+.add-user-name:hover,.add-user-avatar:hover{
+    border:black 2px solid;
+}
+.add-user-name,.add-user-avatar:placeholder-shown{
+    text-align: center;
+}
+.user-form{
+    text-align: center;
+}
+.user-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+@media (min-width: 800px) {
+    .user-list{
+    grid-template-columns: 1fr 1fr;
+    }
+    .add-user-name,.add-user-avatar{
+        width: 250px;
+        margin: 20px;
+    }
+}
+@media (min-width: 1100px) {
+    .user-list{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+    .add-user-name,.add-user-avatar{
+        margin: 20px;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
